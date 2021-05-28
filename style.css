@@ -1,0 +1,261 @@
+* {
+  font-family: rubik;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: auto;
+}
+
+img {
+  vertical-align: middle;
+  margin-left: 50%;
+}
+
+header {
+  background-color: #680105;
+  height: 110px;
+  position: relative;
+}
+
+.logo {
+  left: 24px;
+  display: inline-block;
+}
+
+.logo img {
+  margin-top: 24px;
+  margin-left: 24px;
+  left: 0;
+  height: 74px;
+  width: 196px;
+}
+
+.navbar {
+  padding: 24px;
+  margin-top: 10px;
+  display: inline-block;
+  justify-content: middle;
+  object-fit: cover;
+  position: absolute;
+  left: 27.5%;
+}
+
+.login-on-top {
+  display: inline-block;
+  float: right;
+  padding: 15px 46px;
+  margin-top: 28px;
+  margin-right: 12px;
+}
+
+input {
+  width: 522px;
+  height: 24px;
+}
+
+.log-button {
+  border-radius: 10px;
+  background-color: #54be00;
+  padding: 12px 32px;
+}
+
+.log-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.main {
+  border: 1px solid;
+  display: flex;
+}
+
+.Floating-menu {
+  float: left;
+  margin: 8px;
+}
+
+.Floating-menu ul li {
+  border: 2px solid;
+  border-color: white;
+  padding: 45px 30px;
+  width: 120px;
+  border-radius: 10px;
+  background-color: #680105;
+}
+
+.Floating-menu ul li:hover {
+  background-color: red;
+}
+
+.Floating-menu ul li a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.Floating-menu img {
+  width: 196px;
+  height: 74px;
+}
+
+.content {
+  margin-left: 225px;
+  border: 1px solid;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #680105;
+  border-radius: 10px;
+  height: 460px;
+  width: 720px;
+}
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 320px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  height: 80px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.mySlides img {
+  margin-top: 18px;
+  border-radius: 10px;
+  height: 420px;
+  margin-left: 24px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.story {
+  border: 1px solid;
+  margin-top: 32px;
+  margin-left: 225px;
+  background-color: #680105;
+  border-radius: 10px;
+  margin-right: 8px;
+  height: 140px;
+  width: 720px;
+}
+
+.img-story {
+  border: 1px solid;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 49px;
+  margin: 8px;
+}
+
+h1 {
+  -webkit-text-stroke: 0.5px black;
+  margin-top: 23px;
+  margin-left: 25px;
+}
