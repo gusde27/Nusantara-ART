@@ -40,13 +40,17 @@
             </div>
 
             <div class="log-container">
-                <label for="uname"><b style="color: white;">Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+                <!-- form login -->
+                <form action="action/login_cek.php" method="post" onSubmit="return validasi()">
+                    <label for="uname"><b style="color: white;">Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
 
-                <label for="psw"><b style="color: white;">Password</b></label>
-                <input type="password" placeholder="Enter Password" name="pass" required>
+                    <label for="psw"><b style="color: white;">Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pass" required>
 
-                <button type="submit">Login</button>
+                    <button type="submit">Login</button>
+                </form>
+                <!-- form login -->
                 <div class="sign-up" style="width: 100%; background-color: #ff7f00;">
                     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign
                         Up</button>
@@ -115,6 +119,8 @@
 </body>
 
 <!-- JS -->
+<script type="text/javascript" src="validasi_login.js"></script>
+
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
