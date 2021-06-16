@@ -34,83 +34,83 @@
         </div>
     </header>
     <div class="login-container">
-        <form action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <img src="img/NusantaArt.png" alt="Avatar" class="avatar">
-            </div>
+        <div class="imgcontainer">
+            <img src="img/NusantaArt.png" alt="Avatar" class="avatar">
+        </div>
 
-            <div class="log-container">
-                <!-- form login -->
-                <form action="action/login_cek.php" method="post" onSubmit="return validasi()">
-                    <label for="uname"><b style="color: white;">Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
+        <div class="log-container">
+            <!-- form login -->
+            <form action="action/login_cek.php" method="post" onSubmit="return validasi()">
+                <label for="uname"><b style="color: white;">Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
 
-                    <label for="psw"><b style="color: white;">Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="pass" required>
+                <label for="psw"><b style="color: white;">Password</b></label>
+                <input type="password" placeholder="Enter Password" name="pass" required>
 
-                    <button type="submit">Login</button>
-                </form>
-                <!-- form login -->
-                <div class="sign-up" style="width: 100%; background-color: #ff7f00;">
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign
-                        Up</button>
+                <button type="submit">Login</button>
+            </form>
+            <!-- end form login -->
+            <div class="sign-up" style="width: 100%; background-color: #ff7f00;">
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign
+                    Up</button>
 
-                    <div id="id01" class="modal">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                            title="Close Modal">&times;</span>
-                        <form class="modal-content" method="post" action="/action_page.php">
-                            <div class="container">
-                                <h1>Sign Up</h1>
-                                <p>Please fill in this form to create an account.</p>
-                                <hr>
-                                <label for="email"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Username" name="username" required>
+                <div id="id01" class="modal">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <!-- form signup -->
+                    <div class="container">
+                        <form action="signup.php" method="post">
+                            <h1>Sign Up</h1>
+                            <p>Please fill in this form to create an account.</p>
+                            <hr>
+                            <label for="email"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="username" required>
 
-                                <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="pass" required>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="pass" required>
 
-                                <label for="psw-repeat"><b>Repeat Password</b></label>
-                                <input type="password" placeholder="Repeat Password" name="pass-repeat" required>
+                            <label for="psw-repeat"><b>Repeat Password</b></label>
+                            <input type="password" placeholder="Repeat Password" name="pass-repeat" required>
 
-                                <label>
-                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
-                                    Remember me
-                                </label>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                                Remember me
+                            </label>
 
-                                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
-                                        Privacy</a>.</p>
+                            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
+                                    Privacy</a>.</p>
 
-                                <div class="clearfix">
-                                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                                        class="cancelbtn">Cancel</button>
-                                    <button type="submit" class="signupbtn">Sign Up</button>
-                                </div>
+                            <div class="clearfix">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                    class="cancelbtn">Cancel</button>
+                                <button type="submit" class="signupbtn">Sign Up</button>
                             </div>
                         </form>
                     </div>
-
-                    <script>
-                    // Get the modal
-                    var modal = document.getElementById('id01');
-
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function(event) {
-                        if (event.target == modal) {
-                            modal.style.display = "none";
-                        }
-                    }
-                    </script>
+                    <!-- end form signup -->
                 </div>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember">
-                    <h style="color: white; margin-left: 20px;">Remember me</h>
-                </label>
-            </div>
 
-            <div class="log-container">
-                <span class="psw">Forgot <a href="#" style="color: white; text-decoration: none;">password?</a></span>
+                <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                </script>
             </div>
-        </form>
+            <label>
+                <input type="checkbox" checked="checked" name="remember">
+                <h style="color: white; margin-left: 20px;">Remember me</h>
+            </label>
+        </div>
+
+        <div class="log-container">
+            <span class="psw">Forgot <a href="#" style="color: white; text-decoration: none;">password?</a></span>
+        </div>
     </div>
     <footer>
         footer
@@ -165,28 +165,3 @@ function closeNav() {
 </script>
 
 </html>
-
-<?php
-// add signup
-require_once 'koneksi.php';
-
-if (isset($_POST['signup'])) {
-  $username = $_POST['username'];
-  $pass1 = $_POST['pass1'];
-  $pass2 = $_POST['pass2'];
-
-  // id_produk bernilai '' karena kita set auto increment
-  $data = $koneksi->query("INSERT INTO produk VALUES ('', '', $username', '$password')");
-
-  if ($data) {
-    // pesan jika data tersimpan
-    echo "<script>alert('Data produk berhasil ditambahkan'); window.location.href='index.php'</script>";
-  } else {
-    // pesan jika data gagal disimpan
-    echo "<script>alert('Data produk gagal ditambahkan'); window.location.href='index.php'</script>";
-  }
-} else {
-  // jika coba akses langsung halaman ini akan diredirect ke halaman index
-  header('Location:login.php');
-}
-?>
