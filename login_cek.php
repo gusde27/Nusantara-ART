@@ -1,21 +1,25 @@
-<?php
-include "koneksi.php";
-
+<?php 
+// mengaktifkan session php
+session_start();
+ 
+// menghubungkan dengan koneksi
+include 'koneksi.php';
+ 
+// menangkap data yang dikirim dari form
 $username = $_POST['username'];
-$pass     = $_POST['pass'];
-
-$login = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username' AND password='$pass'");
-$row=mysqli_fetch_array($login);
-
-if ($row['username'] == $username AND $row['password'] == $pass)
-{
-  session_start();
-  $_SESSION['username'] = $row['username'];
-  $_SESSION['password'] = $row['password'];
-
-  header('location:../admin/dashboard.php'); //jika login berhasil, maka ganti/letakkan halaman utamamu disini
-  } else {
-   echo "<script>alert('Username atau Password Admin tidak benar !!!');</script>";
-    echo "<script>location='index.php?pesan=gagal';</script>";
-  }
+$password = $_POST['pass'];
+ 
+// menyeleksi data admin dengan username dan password yang sesuai
+$data = mysqli_query($koneksi,"select * from user where username='$username' and password='$password'");
+ 
+// menghitung jumlah data yang ditemukan
+$cek = mysqli_num_rows($data);
+ 
+if($cek > 0){
+	$_SESSION['username'] = $username;
+	$_SESSION['status'] = "login";
+	header("location:dashboard.php");
+}else{
+	header("location:login.php?pesan=gagal_login");
+}
 ?>

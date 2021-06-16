@@ -39,8 +39,21 @@
         </div>
 
         <div class="log-container">
+            <?php 
+            if(isset($_GET['pesan'])){
+                if($_GET['pesan'] == "gagal"){
+                    echo "Pastikan password sama!";
+                } else if($_GET['pesan'] == "berhasil"){
+                    echo "Data user berhasil ditambah";
+                } else if($_GET['pesan'] == "gagal_login"){
+                    echo "Gagal Login";
+                } else if($_GET['pesan'] == "belum_login"){
+                    echo "DASAR NAKAL!";
+                }
+            }
+            ?>
             <!-- form login -->
-            <form action="action/login_cek.php" method="post" onSubmit="return validasi()">
+            <form action="login_cek.php" method="post" onSubmit="return validasi()">
                 <label for="uname"><b style="color: white;">Username</b></label>
                 <input type="text" placeholder="Enter Username" name="username" required>
 
