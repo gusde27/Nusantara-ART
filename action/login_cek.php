@@ -4,7 +4,7 @@ include "koneksi.php";
 $username = $_POST['username'];
 $pass     = $_POST['pass'];
 
-$login = mysqli_query($connect, "SELECT * FROM user WHERE username = '$username' AND password='$pass'");
+$login = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username' AND password='$pass'");
 $row=mysqli_fetch_array($login);
 
 if ($row['username'] == $username AND $row['password'] == $pass)

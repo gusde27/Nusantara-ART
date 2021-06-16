@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="profile">
-            <a href="#">Login</a>
+            <a href="login.php">Login</a>
         </div>
     </header>
     <div class="container">

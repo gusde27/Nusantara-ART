@@ -58,13 +58,13 @@
                     <div id="id01" class="modal">
                         <span onclick="document.getElementById('id01').style.display='none'" class="close"
                             title="Close Modal">&times;</span>
-                        <form class="modal-content" action="/action_page.php">
+                        <form class="modal-content" method="post" action="/action_page.php">
                             <div class="container">
                                 <h1>Sign Up</h1>
                                 <p>Please fill in this form to create an account.</p>
                                 <hr>
-                                <label for="email"><b>Email</b></label>
-                                <input type="text" placeholder="Enter Email" name="email" required>
+                                <label for="email"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="username" required>
 
                                 <label for="psw"><b>Password</b></label>
                                 <input type="password" placeholder="Enter Password" name="pass" required>
@@ -165,3 +165,28 @@ function closeNav() {
 </script>
 
 </html>
+
+<?php
+// add signup
+require_once 'koneksi.php';
+
+if (isset($_POST['signup'])) {
+  $username = $_POST['username'];
+  $pass1 = $_POST['pass1'];
+  $pass2 = $_POST['pass2'];
+
+  // id_produk bernilai '' karena kita set auto increment
+  $data = $koneksi->query("INSERT INTO produk VALUES ('', '', $username', '$password')");
+
+  if ($data) {
+    // pesan jika data tersimpan
+    echo "<script>alert('Data produk berhasil ditambahkan'); window.location.href='index.php'</script>";
+  } else {
+    // pesan jika data gagal disimpan
+    echo "<script>alert('Data produk gagal ditambahkan'); window.location.href='index.php'</script>";
+  }
+} else {
+  // jika coba akses langsung halaman ini akan diredirect ke halaman index
+  header('Location:login.php');
+}
+?>
