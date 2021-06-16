@@ -10,42 +10,32 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<!-- Header -->
-		<header>
-			<div class="logo">
-				<a href="">
-					<img src="img/NusantaArt.png">
-				</a>
-			</div>
-			<div class="navbar">
-				<div class="Search-bar">
-					<input type="text" placeholder="Search.." name="find">
-				</div>
-			</div>
-			<div class="login-on-top">
-				<span class="log-button">
-					<a href="#">Login</a>
-				</span>
-			</div>
-		</header>
-	<!-- End of Header -->
 
-	<!-- main -->
-	<div class="main">
-		<!-- Floating Menu -->
-		<div class="Floating-menu">
-			<div class="menu-list">
-				<ul>
-					<li><a href="#">Dashboard</a></li>
-					<li><a href="#">Profile</a></li>	
-					<li><a href="#">Help</a></li>	
-					<li><a href="#">About</a></li>
-				</ul>
+	<header>
+		<nav class="Menu-Navigasi">
+			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+			<div id="mySidenav" class="sidenav">
+ 	 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Help</a>
+				<a href="#">Contact</a>
+				<img src="img/NusantaArt.png">
+			</div>
+		</nav>
+		<div class="logo">
+			<img src="img/NusantaArt.png">
+		</div>
+		<div class="find">
+			<div class="Search-bar">
+				<input type="text" placeholder="Search.." name="find">
 			</div>
 		</div>
-		<!-- End of Floating Menu -->
-
-		<!-- The Content -->
+		<div class="profile">
+				<a href="#">Login</a>
+		</div>
+	</header>
+	<div class="container">
 		<div class="content">
 			<!-- sliding content -->
 					<!-- Slideshow container -->
@@ -91,76 +81,180 @@
 				<span class="dot" onclick="currentSlide(3)"></span>
 				<span class="dot" onclick="currentSlide(4)"></span>  
 			</div>
-
-			<script>
-				var slideIndex = 1;
-				showSlides(slideIndex);
-				function plusSlides(n) {
-					showSlides(slideIndex += n);
-				}
-				function currentSlide(n) {
-					showSlides(slideIndex = n);
-				}
-				function showSlides(n) {
-					var i;
-					var slides = document.getElementsByClassName("mySlides");
-					var dots = document.getElementsByClassName("dot");
-					if (n > slides.length) {
-						slideIndex = 1}    
-					if (n < 1) {slideIndex = slides.length}
-					for (i = 0; i < slides.length; i++) {
-					    slides[i].style.display = "none";  
-					}
-					for (i = 0; i < dots.length; i++) {
-					    dots[i].className = dots[i].className.replace(" active", "");
-					}
-					slides[slideIndex-1].style.display = "block";  
-						dots[slideIndex-1].className += " active";
-					}	
-				</script>
-			</div>
-		</div>
 				<!-- end of sliding content -->
-				<!-- Stories -->
-				<div class="story">
-					<div class="img-story">
-						<div class="floating-profile">
-							<p>pict here</p>
-						</div>
+		</div>
+		<ul class="vid-container">
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
 					</div>
-					<div class="img-story">
-						<div class="floating-profile">
-							<p>pict here</p>
-						</div>
-					</div>
-					<div class="img-story">
-						<div class="floating-profile">
-							<p>pict here</p>
-						</div>
-					</div>
-						<div class="img-story">
-							<div class="floating-profile">
-								<p>pict here</p>
-							</div>
-						</div>
-				</div>
-				<!-- End of Stories -->
-
-				<!-- Video list -->
-				<div class="video-list">
-					<div class="content-box">
-						<div class="video-box">
-							
-						</div>
-						<a class="nama-video" href=""></a>
-						<div class="profile-in-video">
-							
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
 						</div>
 					</div>
 				</div>
-				<!-- End of Video list -->
+			</li>
 
-			</div>
-	<!-- End of Main -->
-	</body>
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
+					</div>
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
+					</div>
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
+					</div>
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
+					</div>
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
+					</div>
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
+					</div>
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
+					</div>
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
+						</div>
+					</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="video">
+					<div class="vid-box">
+						box
+					</div>
+					<div class="judul-profile">
+						<a class="judul"href="#">judul kwafuafajois</a>
+						<div class="profile-img">
+							img
+						</div>
+					</div>
+				</div>
+			</li>
+
+		</ul>
+
+	</div>
+	<footer>
+		footer
+	</footer>
+
+</body>
+
+<!-- JS -->
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {
+				slideIndex = 1}    
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			    slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			    dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+		}	
+	</script>
+
+	<script>
+		function openNav() {
+  			document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+ 			document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+
 </html>
