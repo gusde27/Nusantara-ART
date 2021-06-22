@@ -35,6 +35,4 @@
         $msg="Jenis file tidak sesuai atau ukuran file terlalu besar!";
     }
     echo "<p align=\"center\">$msg</p>";
-
- 
  ?>

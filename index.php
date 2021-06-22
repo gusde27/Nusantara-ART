@@ -97,119 +97,16 @@
             <li>
                 <div class="video">
                     <div class="vid-box">
-                        box
-                    </div>
-                    <div class="judul-profile">
-                        <a class="judul" href="#">judul kwafuafajois</a>
-                        <div class="profile-img">
-                            img
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="video">
-                    <div class="vid-box">
-                        box
-                    </div>
-                    <div class="judul-profile">
-                        <a class="judul" href="#">judul kwafuafajois</a>
-                        <div class="profile-img">
-                            img
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="video">
-                    <div class="vid-box">
-                        box
-                    </div>
-                    <div class="judul-profile">
-                        <a class="judul" href="#">judul kwafuafajois</a>
-                        <div class="profile-img">
-                            img
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="video">
-                    <div class="vid-box">
-                        box
-                    </div>
-                    <div class="judul-profile">
-                        <a class="judul" href="#">judul kwafuafajois</a>
-                        <div class="profile-img">
-                            img
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="video">
-                    <div class="vid-box">
-                        box
-                    </div>
-                    <div class="judul-profile">
-                        <a class="judul" href="#">judul kwafuafajois</a>
-                        <div class="profile-img">
-                            img
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="video">
-                    <div class="vid-box">
-                        box
-                    </div>
-                    <div class="judul-profile">
-                        <a class="judul" href="#">judul kwafuafajois</a>
-                        <div class="profile-img">
-                            img
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="video">
-                    <div class="vid-box">
-                        box
-                    </div>
-                    <div class="judul-profile">
-                        <a class="judul" href="#">judul kwafuafajois</a>
-                        <div class="profile-img">
-                            img
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="video">
-                    <div class="vid-box">
-                        box
-                    </div>
-                    <div class="judul-profile">
-                        <a class="judul" href="#">judul kwafuafajois</a>
-                        <div class="profile-img">
-                            img
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="video">
-                    <div class="vid-box">
-                        box
+                        <?php
+                $fetchVideos = mysqli_query($koneksi, "SELECT * FROM video ORDER BY id DESC");
+                while($row = mysqli_fetch_assoc($fetchVideos)){
+                $location = $row['video'];
+                
+                echo "<div >";
+                echo "<video src='".$location."' controls width='320px' height='200px' >";
+                echo "</div>";
+                }
+            ?>
                     </div>
                     <div class="judul-profile">
                         <a class="judul" href="#">judul kwafuafajois</a>
